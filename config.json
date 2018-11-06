@@ -1,0 +1,9 @@
+{
+    "path_file":"livros.csv",
+    "sort_mode":{
+        "default":true,
+        "title_up":"",
+        "author_up_title_down":false,
+        "edition_down_author_down_title_up":false
+    }
+}
