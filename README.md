@@ -1,9 +1,41 @@
-# list-sort-order
+# Serviço de ordenação de livros
+
+Este projeto consiste em realizar um pedido de ordenação de uma lista de livros.
+A lista deve ser proveniente de um arquivo csv no formato das colunas:
+
+Indice  |   Título  |   Autor   |    Ano de edição
+
+O programa realizará a leitura do arquivo csv e efetuará a ordenação pelo método desejado,
+ao final, será escrito um novo arquivo csv 'lista_ord.csv' com a lista ordenada.
+
+As configurações do sistema devem ser feitas no arquivo config.json, no qual apresenta 2 campos:
+```
+{
+    "path_file":"livros.csv",           # path é o local e o nome do arquivo a ser lido
+    "sort_mode":{                       # sort_mode é o modo de ordenação desejado, que deve ser colocado como <true>
+        "default":true,                 # o primeiro valor true será o atendido, para desabilitar o modo,
+        "title_up":false,               # pode-se utilizar <false> ou algum outro caractere
+        "author_up_title_down":false,
+        "edition_down_author_down_title_up":false
+    }
+}
+```
+Ao realizar as configurações deste arquivo, o programa é abstraído pelo usuário, ficando encapsulado. 
+
+Foi optado por um arquivo csv para a entrada dos dados devido à praticidade de leitura, 
+bem como por ser um padrão de listagem de dados devido ao seu modelo de tabela.
+
+O arquivo JSON foi escolhido por ser também de prática manipulação e por ser um padrão no 
+envio de dados entre sistemas, seu formato também facilita a interação com o usuário.
+
+A linguagem Python foi escolhida por possuir muitas ferramentas para a manipulação de arquivos 
+e dados. Outras opções seriam Java, Javascript ou C++. 
 
 Desenvolvido em Python versão 3.6.5
-Packages:
-csv
-json
-sys
 
-Maiores informações em documents.txt
+Packages:
+- csv
+- json
+- sys
+
+
